@@ -41,7 +41,7 @@ class SpotipyClient():
         ids_artists=[]
         for item in top_tracks["items"]:
             artist_id = item["artists"][0]["id"]
-            artist_name=item["items"][0]["name"]
+            artist_name=item["artists"][0]["name"]
             ids_artists.append(artist_id)
         # filtering repoetitions in artists
         ids_artists=list(set(ids_artists))
@@ -63,7 +63,7 @@ class SpotipyClient():
     def get_new_releases_artists_ids(self,ids_artists):
         new_releases=self.client.new_releases(limit=20)["albums"]
         for item in new_releases["items"]:
-            artist_id =item["artists"][0]["id"] 
+            artist_id = item["artists"][0]["id"] 
             ids_artists.append(artist_id) 
         ids_artists=list(set(ids_artists))  
         return ids_artists
