@@ -1,5 +1,4 @@
 
-import flask
 from flask import Flask, flash, request, render_template
 from spotipy_client.__pycache__.spotipy_client import SpotipyClient
 
@@ -11,6 +10,8 @@ app = Flask(__name__)
 app.secret_key=b'_kdfhvkfd\n\xec]/'
 
 @app.route("/",methods=["GET","POST"])
+
+
 def client_auth_form():
     #allows authentication in webserver 
     if request.method=="POST":
@@ -24,4 +25,6 @@ def client_auth_form():
         flash("Playlist created on Spotify, enjoy!")
     return render_template("index.html")
 if __name__ == "__main__":
+    #from waitress import serve
+    #serve(app,host="0.0.0.0",port=8080)
     app.run()

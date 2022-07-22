@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Ethereal by HTML5 UP</title>
+		<title>Spotipy Recommender</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}" />
+
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css')}}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -53,7 +54,7 @@
 									<li><span class="icon solid fa-code"><span class="label">Nullam</span></span></li>
 								</div>
 								<div class="image filtered tinted" data-position="top left">
-									<img src="images/pic02.jpg" alt="" />
+									<img src="{{ url_for('static', filename='images/pic02.jpg')}}" alt="" />
 								</div>
 								
 							</section>
