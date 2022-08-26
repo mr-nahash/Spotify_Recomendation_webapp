@@ -1,9 +1,9 @@
 
 from flask import Flask, flash, request, render_template
-from spotipy_client.__pycache__.spotipy_client import SpotipyClient
+from spotipy_client import *
 
-REDIRECT_URI="http://127.0.0.1:5000/api_callback"
-SCOPE="playlist-modidy-private,playlist-modify-public,user-top-read"
+REDIRECT_URI="http://localhost:8888/callback/"
+SCOPE="playlist-modify-public,user-top-read"
 
 app = Flask(__name__)
 #create secret key to print thing in screen

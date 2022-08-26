@@ -6,12 +6,13 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics.pairwise import linear_kernel
 
+
 class SpotipyClient():
     client=None
     client_id=None
     Client_secret=None
     username=None
-    redirect_uri="http://localhost:8888"
+    redirect_uri="http://localhost:8888/callback"
 
     def __init__(self,client_id,client_secret,username,redirect_uri,scope):
         self.client_id= client_id
